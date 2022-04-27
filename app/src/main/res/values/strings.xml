@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Paging</string>
+    <string name="loading_error_message">Results could not be loaded</string>
+    <string name="retry_message">Retry</string>
+    <string name="no_results_message">No results found</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cannot_load_message">Result could not be loaded</string>
+</resources>
