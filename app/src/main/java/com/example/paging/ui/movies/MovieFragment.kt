@@ -1,4 +1,4 @@
-package com.example.paging.ui.gallery
+package com.example.paging.ui.movies
 
 import android.os.Bundle
 import android.view.View
