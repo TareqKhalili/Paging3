@@ -1,6 +1,7 @@
-package com.example.paging.data
+package com.example.paging.data.remote
 
 import com.example.paging.BuildConfig
+import com.example.paging.data.entities.TmdbMovie
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -17,5 +18,6 @@ interface TmdbApi {
 
 
 data class TmdbResponse(
+    val page: Int,
     val results: List<TmdbMovie>
 )

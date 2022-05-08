@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.paging.R
-import com.example.paging.data.TmdbMovie
+import com.example.paging.data.entities.TmdbMovie
 import com.example.paging.databinding.ListItemTmdbMovieBinding
 
 class TmdbMovieAdapter :
@@ -33,6 +33,8 @@ class TmdbMovieAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(movie: TmdbMovie) {
+            println("image ${movie.backdropUrl}")
+
             binding.apply {
                 Glide.with(itemView)
                     .load(movie.backdropUrl)

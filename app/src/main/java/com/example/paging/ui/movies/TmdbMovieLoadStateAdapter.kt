@@ -27,17 +27,15 @@ class TmdbMovieLoadStateAdapter(private val retry: () -> Unit) :
     inner class LoadStateViewHolder(private val binding: MovieLoadStateFooterBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        init {
-            binding.buttonRetry.setOnClickListener {
-                retry()
-            }
-        }
-
         fun bind(loadState: LoadState) {
             binding.apply {
                 progressBar.isVisible = loadState is LoadState.Loading
                 buttonRetry.isVisible = loadState !is LoadState.Loading
                 textViewError.isVisible = loadState !is LoadState.Loading
+
+                buttonRetry.setOnClickListener {
+                    retry()
+                }
             }
         }
     }
