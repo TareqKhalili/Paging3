@@ -15,9 +15,6 @@ interface TmdbDao {
     @Query("SELECT * FROM movies")
     fun getAll(): PagingSource<Int, TmdbMovie>
 
-    @Query("SELECT * FROM movies ORDER BY page DESC LIMIT 1")
-    fun getByPageNumber(): TmdbMovie
-
     @Query("DELETE FROM movies")
     suspend fun clearAll()
 }
